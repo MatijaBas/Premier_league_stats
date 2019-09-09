@@ -97,38 +97,38 @@ function makeGraphs(error, pl_statsData) {
         ])
         .brushOn(false);
 
+    // Total spend per club
 
-    function makeGraphs(error, pl_statsData) {
-        var ndx = crossfilter(pl_statsData);
-        var salarys_dim = ndx.dimension(dc.pluck('salarys'));
-        var total_spend_on_salarys = salarys_dim.group().reduceSum(dc.pluck('team'));
-        dc.pieChart('#per-team-chart')
-            .height(330)
-            .radius(90)
-            .transitionDuration(1500)
-            .dimension(salarys_dim)
-            .group(total_spend_on_salarys);
+    var ndx = crossfilter(pl_statsData);
+    var team_dim = ndx.dimension(dc.pluck('team'));
+    var total_spend_on_salarys = team_dim.group().reduceSum(dc.pluck('salarys'));
+    dc.pieChart('#on-salary-spend-chart')
+        .height(330)
+        .radius(120)
+        .transitionDuration(1500)
+        .dimension(team_dim)
+        .group(total_spend_on_salarys);
 
-        var season_dim = ndx.dimension(dc.pluck('team'));
-        var total_spend_on_transfers = team_dim.group().reduceSum(dc.pluck('team'));
-        dc.pieChart('#per-season-chart')
-            .height(330)
-            .radius(90)
-            .transitionDuration(1500)
-            .dimension(team_dim)
-            .group(total_spend_on_transfers);
+    var team_dim = ndx.dimension(dc.pluck('team'));
+    var total_spend_on_transfers = team_dim.group().reduceSum(dc.pluck('spend_on_transfer'));
+    dc.pieChart('#on-transfer-spend-chart')
+        .height(330)
+        .radius(120)
+        .transitionDuration(1500)
+        .dimension(team_dim)
+        .group(total_spend_on_transfers);
 
-        var state_dim = ndx.dimension(dc.pluck('state'));
-        var total_spend_per_state = state_dim.group().reduceSum(dc.pluck('team'));
-        dc.pieChart('#per-state-chart')
-            .height(330)
-            .radius(90)
-            .transitionDuration(1500)
-            .dimension(state_dim)
-            .group(total_spend_per_state);
+    var team_dim = ndx.dimension(dc.pluck('team'));
+    var total_earnings_on_transfers = team_dim.group().reduceSum(dc.pluck('transfer_earnings'));
+    dc.pieChart('#on-transfer-earnings-chart')
+        .height(330)
+        .radius(120)
+        .transitionDuration(1500)
+        .dimension(team_dim)
+        .group(total_earnings_on_transfers);
 
 
-    }
+
 
     dc.renderAll();
 

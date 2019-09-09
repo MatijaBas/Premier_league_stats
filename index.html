@@ -30,32 +30,101 @@
         <p>Liverpool, Manchester United, Arsenal, Chelsea</p>
         <a class="btn btn-primary btn-lg" href="#" role="button" onclick="refreshPage()">Refresh charts</a>
     </div>
+    <main>
 
-    <div class="row">
-        <div class="col-lg-6">
-            <h3>Total wins per club from 2006/07 to 2017/18</h3>
-            <div id="wins-per-club"></div>
-        </div>
-        <div class="col-lg-6">
-            <h3>Total losses per club from 2006/07 to 2017/18</h3>
-            <div id="losses-per-club"></div>
-        </div>
-    </div>
+        <section class="section">
+            <div class="container">
 
-    <div class="row">
-        <div class="col-lg-8">
-            <h3>Total goals per season from 2006/07 to 2017/18</h3>
-            <div id="select-club"></div>
-            <div id="goals-per-season"></div>
-        </div>
-    </div>
+                <div class="row bg-clubs-logo">
+                    <div class="col-xs-12 col-md-12 col-sm-12">
+                        <img src="./assets/Images/Clubs-logo.jpg"></img>
+                    </div>
+                </div>
 
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h3>Total wins per club from 2006/07 to 2017/18</h3>
+                        <div id="wins-per-club"></div>
+                    </div>
+                    <div class="col-lg-6">
+                        <h3>Total losses per club from 2006/07 to 2017/18</h3>
+                        <div id="losses-per-club"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="row">
+                <div class="col-lg-8">
+                    <h3>Total goals per season from 2006/07 to 2017/18</h3>
+                    <div id="select-club"></div>
+                    <div id="goals-per-season"></div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+
+            <div>
+                <h3>Total Spend Per Team</h3>
+                <div id="per-team-chart"></div>
+            </div>
+
+            <div>
+                <h3>Total Spend Per Store</h3>
+                <div id="per-store-chart"></div>
+            </div>
+
+            <div>
+                <h3>Total Spend Per State</h3>
+                <div id="per-state-chart"></div>
+            </div>
+
+        </section>
+
+        <!-- Table and Last / Next buttons  -->
+        <section class="section">
+            <div class="container">
+                <div class="row">
+                    <h4>Table showing descending chronological events over a twelve year period:</h4>
+                    <table id="dc-data-table" class="table table-bordered">
+                        <thead>
+                            <tr class="header">
+                                <th>Season</th>
+                                <th>Team</th>
+                                <th>Wins</th>
+                                <th>Losses</th>
+                                <th>Goals</th>
+                                <th>Goals conceded</th>
+                                <th>Clean sheets</th>
+                                <th>Corner taken</th>
+                            </tr>
+                        </thead>
+                    </table>
+                    <div id="paging">
+                        Showing <span id="begin"></span>-<span id="end"></span> of <span id="size"></span> <span id="totalsize"></span>
+                        <input id="last" class="btn" type="Button" value="Last" />
+                        <input id="next" class="btn" type="button" value="Next" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+    </main>
+
+    <footer>
+
+    </footer>
     <!--Bootstrap JS-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js " integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 " crossorigin="anonymous "></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js " integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM " crossorigin="anonymous "></script>
     <!--Custom JS-->
     <script type="text/javascript " src="./assets/js/main.js "></script>
+
 </body>
 
 </html>

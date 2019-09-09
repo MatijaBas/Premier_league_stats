@@ -133,9 +133,7 @@ function makeGraphs(error, pl_statsData) {
     dc.renderAll();
 
 
-
-
-    /*Table to show some data that present. Next and last buttons used for scrolling through tabulated data*/
+    /*Table to show all data that present. Next and last buttons used for scrolling through tabulated data*/
     function show_data_table(ndx) {
 
         var dim = ndx.dimension(function(d) { return d.dim; });
@@ -148,16 +146,16 @@ function makeGraphs(error, pl_statsData) {
 
             .columns([
                 function(d) { return d.season; },
-                function(d) { return d.team; },
                 function(d) { return d.wins; },
                 function(d) { return d.losses; },
                 function(d) { return d.goals; },
-                function(d) { return d.goals_conceded; },
-                function(d) { return d.clean_sheet; },
-                function(d) { return d.corner_taken; }
+                function(d) { return d.salarys; },
+                function(d) { return d.spend_on_transfer; },
+                function(d) { return d.transfer_earnings; },
+                function(d) { return d.clean_sheet; }
 
             ]).sortBy(function(d) {
-                return d.season; /* sortBy return = d.season will sort data by seasons */
+                return d.season; /* sortBy return = d.Year will sort data by years */
             })
             .order(d3.descending) /* reinsert ; after final peice of this section */
 
@@ -206,7 +204,7 @@ function makeGraphs(error, pl_statsData) {
             update_offset();
             table.redraw();
         });
-
+        /* Event Listener function that fires when "next" HTML btn is clicked */
 
 
         $('#last').on('click', function() {
@@ -214,11 +212,16 @@ function makeGraphs(error, pl_statsData) {
             update_offset();
             table.redraw();
         });
-
-
+        /* Event Listener function that fires when "last" HTML btn is clicked */
 
     }
+
+
+
+
+
 }
+
 // Refresh Page Function
 function refreshPage() {
     window.location.reload();

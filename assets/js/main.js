@@ -128,96 +128,29 @@ function makeGraphs(error, pl_statsData) {
         .group(total_earnings_on_transfers);
 
 
+    queue()
+        .defer(d3.json, "data/pl_stats.json")
+        .await(someFunction);
 
+    function someFunction(error, data) {
+        $.each(data, function(key, value) {
+            data += '<tr>';
+            data += '<td>' + value.season + '</td>';
+            data += '<td>' + value.team + '</td>';
+            data += '<td>' + value.wins + '</td>';
+            data += '<td>' + value.losses + '</td>';
+            data += '<td>' + value.goals + '</td>';
+            data += '<td>' + value.salarys + '</td>';
+            data += '<td>' + value.spend_on_transfer + '</td>';
+            data += '<td>' + value.transfer_earnings + '</td>';
+            data += '<td>' + value.clean_sheet + '</td>';
+            data += '</tr>';
+        });
+        $('#dc-data-table').append(data);
+    }
 
     dc.renderAll();
 
-
-    // /*Table to show all data that present. Next and last buttons used for scrolling through tabulated data*/
-    // function show_data_table(ndx) {
-
-    //     var dim = ndx.dimension(function(d) { return d.dim; });
-
-    //     var table = dc.dataTable("#dc-data-table") /* variable created for pagination */
-
-    //         .dimension(dim)
-    //         .group(function(d) { return ""; })
-    //         .size(Infinity) /* Adjust amount of rows here. Use 'Infinity' to show all data */
-
-    //         .columns([
-    //             function(d) { return d.season; },
-    //             function(d) { return d.wins; },
-    //             function(d) { return d.losses; },
-    //             function(d) { return d.goals; },
-    //             function(d) { return d.salarys; },
-    //             function(d) { return d.spend_on_transfer; },
-    //             function(d) { return d.transfer_earnings; },
-    //             function(d) { return d.clean_sheet; }
-
-    //         ]).sortBy(function(d) {
-    //             return d.season; /* sortBy return = d.Year will sort data by years */
-    //         })
-    //         .order(d3.descending) /* reinsert ; after final peice of this section */
-
-    //         /* pagination */
-
-    //         .on('preRender', update_offset)
-    //         .on('preRedraw', update_offset)
-    //         .on('pretransition', display);
-
-
-    //     /* use odd page size to show the effect better */
-    //     var ofs = 0,
-    //         pag = 7;
-
-    //     function update_offset() {
-    //         var totFilteredRecs = ndx.groupAll().value();
-    //         var end = ofs + pag > totFilteredRecs ? totFilteredRecs : ofs + pag;
-    //         ofs = ofs >= totFilteredRecs ? Math.floor((totFilteredRecs - 1) / pag) * pag : ofs;
-    //         ofs = ofs < 0 ? 0 : ofs;
-    //         table.beginSlice(ofs); /*table used as variable for dc.dataTable("#dc-data-table") */
-    //         table.endSlice(ofs + pag); /*table used as variable for dc.dataTable("#dc-data-table")*/
-    //     }
-
-    //     function display() {
-    //         var totFilteredRecs = ndx.groupAll().value();
-    //         var end = ofs + pag > totFilteredRecs ? totFilteredRecs : ofs + pag;
-    //         d3.select('#begin')
-    //             .text(end === 0 ? ofs : ofs + 1);
-    //         d3.select('#end')
-    //             .text(end);
-    //         d3.select('#last')
-    //             .attr('disabled', ofs - pag < 0 ? 'true' : null);
-    //         d3.select('#next')
-    //             .attr('disabled', ofs + pag >= totFilteredRecs ? 'true' : null);
-    //         d3.select('#size').text(totFilteredRecs);
-    //         if (totFilteredRecs != ndx.size()) {
-    //             d3.select('#totalsize').text("(filtered Total: " + ndx.size() + " )");
-    //         }
-    //         else {
-    //             d3.select('#totalsize').text('');
-    //         }
-    //     }
-
-    //     $('#next').on('click', function() {
-    //         ofs += pag;
-    //         update_offset();
-    //         table.redraw();
-    //     });
-    //     /* Event Listener function that fires when "next" HTML btn is clicked */
-
-
-    //     $('#last').on('click', function() {
-    //         ofs -= pag;
-    //         update_offset();
-    //         table.redraw();
-    //     });
-    //     /* Event Listener function that fires when "last" HTML btn is clicked */
-
-    // }
-
-
-    // dc.renderAll();
 
 }
 

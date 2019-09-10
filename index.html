@@ -97,6 +97,7 @@
                     <table class="table table-bordered" id="dc-data-table">
                         <tr class="header">
                             <th>Season</th>
+                            <th>Team</th>
                             <th>Wins</th>
                             <th>Losses</th>
                             <th>Goals</th>
@@ -114,27 +115,6 @@
                 </div>
             </div>
         </section>
-        <script>
-            $(document).ready(function() {
-                $getJSON(pl_stats.json, function(data) {
-                    var stats_data = '';
-                    $each(data, function(key, value) {
-                        stats_data += '<tr>';
-                        stats_data += '<td>' + value.team + '</td>';
-                        stats_data += '<td>' + value.wins + '</td>';
-                        stats_data += '<td>' + value.losses + '</td>';
-                        stats_data += '<td>' + value.goals + '</td>';
-                        stats_data += '<td>' + value.salarys + '</td>';
-                        stats_data += '<td>' + value.spend_on_transfer + '</td>';
-                        stats_data += '<td>' + value.transfer_earnings + '</td>';
-                        stats_data += '<td>' + value.clean_sheet + '</td>';
-                        stats_data += '</tr>';
-                    });
-                    $('#dc-data-table').append(stats_data);
-                });
-            });
-        </script>
-
 
     </main>
 

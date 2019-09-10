@@ -6,9 +6,69 @@
     font-size: 16px;
 }
 
+/*--------------------------------------Navbar---------------*/
+
+.navbar {
+    background-color: #2C3E50;
+}
+
+/*------------------------------------Sections/Header/Footer info*/
+
 .section {
     border-bottom: 1px solid #ffff00;
     padding: 20px 0;
     margin-left: 4px;
     margin-right: 4px;
+}
+
+.footer {
+    background-color: #2C3E50;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: 0px;
+}
+
+.brand {
+    font-size: 20px;
+    font-weight: bolder;
+    margin-right: 10px;
+    color: #00ffff;
+}
+
+.footer-section-paragraph {
+    color: #00ffff;
+    float: right;
+    font-weight: bolder;
+    margin-top: 20px;
+    font-size: larger;
+}
+
+.navbar-section-paragraph {
+    color: #00ffff;
+    float: right;
+
+    font-weight: bolder;
+    margin-top: 20px;
+    font-size: larger;
+}
+
+
+/*------------------------------------Refresh Buttons*/
+
+#refresh-button {
+    float: inherit;
+    margin-top: 7px;
+    margin-left: 15px;
+
+}
+
+#footer-refresh-button {
+    display: inline-block;
+    margin: 5px 0px 5px 5px;
+}
+
+#central-refresh-button {
+    text-align: center;
+    display: block;
+    width: 100%;
 }

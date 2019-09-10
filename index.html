@@ -25,13 +25,28 @@
 
 <body>
 
-    <div class="jumbotron">
-        <h1 class="display-4">Top 4 Premier league clubs</h1>
-        <p class="lead">Comparison top 4 premier league clubs from 2006/07 to 2017/18.</p>
-        <hr class="my-4">
-        <p>Liverpool, Manchester United, Arsenal, Chelsea</p>
-        <a class="btn btn-primary btn-lg" href="#" role="button" onclick="refreshPage()">Refresh charts</a>
-    </div>
+    <!-- Navbar  -->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">Comparison top 4 premier league clubs from 2006/07 to 2017/18</a>
+                <div id="refresh-button">
+                    <button type="submit" class="btn btn-warning" onClick="refreshPage()">Refresh Charts</button>
+
+                </div>
+            </div>
+            <p class="navbar-section-paragraph">Click on Graphs and Charts to select data for analysis </p>
+        </div>
+    </nav>
+
+    <!--<div class="jumbotron">-->
+        <!--    <h1 class="display-4">Top 4 Premier league clubs</h1>-->
+        <!--    <p class="lead">Comparison top 4 premier league clubs from 2006/07 to 2017/18.</p>-->
+        <!--    <hr class="my-4">-->
+        <!--    <p>Liverpool, Manchester United, Arsenal, Chelsea</p>-->
+        <!--<a class="btn btn-warning btn-lg" href="#" role="button" onclick="refreshPage()">Refresh charts</a>-->
+        <!--</div>-->
+
     <main>
 
         <section class="section">
@@ -64,6 +79,16 @@
                         <div id="select-club"></div>
                         <div id="goals-per-season"></div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Central Refresh Button -->
+        <section class="section">
+            <div class="container">
+                <div id="central-refresh-button">
+                    <!-- btn-lg btn-block used to make central refresh button the width of the screen -->
+                    <button type="submit" class="btn btn-warning btn-lg btn-block" onClick="refreshPage()">Refresh Charts</button>
                 </div>
             </div>
         </section>
@@ -118,8 +143,16 @@
 
     </main>
 
-    <footer>
-
+    <footer class="footer">
+        <div class="container-fluid">
+            <div id="footer-details">
+                <a class="brand" href="index.html">Back to Top</a>
+                <div id="footer-refresh-button">
+                    <button type="submit" class="btn btn-warning" onClick="refreshPage()">Refresh Charts</button>
+                </div>
+                <p class="footer-section-paragraph">Hover or Click on Graphs and Charts to select data for analysis</p>
+            </div>
+        </div>
     </footer>
     <!--Bootstrap JS-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>

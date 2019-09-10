@@ -6,8 +6,9 @@
     font-size: 16px;
 }
 
-/*h3 {*/
-
-/*    margin-left: 10px;*/
-
-/*}*/
+.section {
+    border-bottom: 1px solid #ffff00;
+    padding: 20px 0;
+    margin-left: 4px;
+    margin-right: 4px;
+}

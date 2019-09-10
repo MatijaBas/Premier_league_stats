@@ -1804,9 +1804,9 @@
   },
   {
     "team": "Arsenal",
-    "wins": 23,
-    "losses": 9,
-    "goals": 77,
+    "wins": "23",
+    "losses": "9",
+    "goals": "77",
     "total_yel_card": 68,
     "total_red_card": 3,
     "total_scoring_att": 566,

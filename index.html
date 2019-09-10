@@ -11,6 +11,8 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/dc/2.1.8/dc.min.css" />
     <!--Bootstrap CSS-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700|Ubuntu:400,700&display=swap" rel="stylesheet">
     <!--Custom CSS-->
     <link rel="stylesheet" href="./assets/css/style.css" type="text/css" />
     <!--D3 JS-->
@@ -92,29 +94,46 @@
             <div class="container">
                 <div class="row">
                     <h4>Table showing descending events over a twelve year period:</h4>
-                    <table id="dc-data-table" class="table table-bordered">
-                        <thead>
-                            <tr class="header">
-                                <th>Season</th>
-                                <th>Wins</th>
-                                <th>Losses</th>
-                                <th>Goals</th>
-                                <th>Salarys</th>
-                                <th>Transfers in</th>
-                                <th>Transfers out</th>
-                                <th>Clean Sheet</th>
-                            </tr>
-                        </thead>
+                    <table class="table table-bordered" id="dc-data-table">
+                        <tr class="header">
+                            <th>Season</th>
+                            <th>Wins</th>
+                            <th>Losses</th>
+                            <th>Goals</th>
+                            <th>Salarys</th>
+                            <th>Transfers in</th>
+                            <th>Transfers out</th>
+                            <th>Clean Sheet</th>
+                        </tr>
                     </table>
-                    <div id="paging">
-                        Showing <span id="begin"></span>-<span id="end"></span> of <span id="size"></span> <span id="totalsize"></span>
-                        <input id="last" class="btn" type="Button" value="Last" />
-                        <input id="next" class="btn" type="button" value="Next" />
-                    </div>
+                    <!--<div id="paging">-->
+                    <!--    Showing <span id="begin"></span>-<span id="end"></span> of <span id="size"></span> <span id="totalsize"></span>-->
+                    <!--    <input id="last" class="btn" type="Button" value="Last" />-->
+                    <!--    <input id="next" class="btn" type="button" value="Next" />-->
+                    <!--</div>-->
                 </div>
             </div>
         </section>
-
+        <script>
+            $(document).ready(function() {
+                $getJSON(pl_stats.json, function(data) {
+                    var stats_data = '';
+                    $each(data, function(key, value) {
+                        stats_data += '<tr>';
+                        stats_data += '<td>' + value.team + '</td>';
+                        stats_data += '<td>' + value.wins + '</td>';
+                        stats_data += '<td>' + value.losses + '</td>';
+                        stats_data += '<td>' + value.goals + '</td>';
+                        stats_data += '<td>' + value.salarys + '</td>';
+                        stats_data += '<td>' + value.spend_on_transfer + '</td>';
+                        stats_data += '<td>' + value.transfer_earnings + '</td>';
+                        stats_data += '<td>' + value.clean_sheet + '</td>';
+                        stats_data += '</tr>';
+                    });
+                    $('#dc-data-table').append(stats_data);
+                });
+            });
+        </script>
 
 
     </main>

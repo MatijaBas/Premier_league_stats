@@ -6,10 +6,44 @@
     font-size: 16px;
 }
 
+body {
+    width: 100%;
+    height: auto;
+}
+
 /*--------------------------------------Navbar---------------*/
 
 .navbar {
     background-color: #2C3E50;
+}
+
+.navbar-brand {
+    color: #00ffff;
+}
+
+/*------------------------------------Image*/
+
+.bg-clubs-logo {
+    width: 80%;
+    margin: 4% 10% 5% 10%;
+}
+
+.content-wraper img {
+    width: 100%
+}
+
+.text-wraper {
+    width: 100%;
+    position: relative;
+    margin-top: 0%;
+}
+
+.text-wraper h1 {
+    text-align: center;
+    color: #add8e6;
+    font-size: 5vw;
+    font-family: "roboto", cursive;
+
 }
 
 /*------------------------------------Sections/Header/Footer info*/
@@ -49,9 +83,15 @@
 
     font-weight: bolder;
     margin-top: 20px;
-    font-size: larger;
+    /*font-size: larger;
+    */
 }
 
+
+th {
+    background: lightblue;
+    text-align: center;
+}
 
 /*------------------------------------Refresh Buttons*/
 

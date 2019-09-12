@@ -12,7 +12,7 @@
     <!--Bootstrap CSS-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!--Google Fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700|Ubuntu:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Modak&display=swap" rel="stylesheet">
     <!--Custom CSS-->
     <link rel="stylesheet" href="./assets/css/style.css" type="text/css" />
     <!--D3 JS-->
@@ -70,6 +70,13 @@
                         <h3>Total losses per club from 2006/07 to 2017/18</h3>
                         <div id="losses-per-club"></div>
                     </div>
+                    <div id="col-lg-6 first-paragraph">
+                        <p class="section-paragraph"><br>One significant feature of the Premier League in the mid-2000s was the dominance of the so-called "Top Four" clubs: Arsenal, Chelsea, Liverpool and Manchester United. During this decade, they dominated the top four spots, which
+                            came with UEFA Champions League qualification, taking all top-four places in 5 out of 6 seasons from 2003–04 to 2008–09 inclusive, while every season during the 2000s saw the "Big Four" always qualifying for European competition.
+                            Following the 2003–04 season, Arsenal acquired the nickname "The Invincibles" as they became the first club to complete a Premier League campaign without losing a single game, the only time it has ever happened in the Premier
+                            League.In the charts above we can see number of wins and losses during the period of 12years. Most sucessful team was Man Utd. with 290 wins and only 77 losses.In that period they won 6 premier league titles. <br><b>CREDIT:<i> Wikipedia(2019)</i></b>
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -81,6 +88,12 @@
                         <h3>Total goals per season from 2006/07 to 2017/18</h3>
                         <div id="select-club"></div>
                         <div id="goals-per-season"></div>
+                    </div>
+                    <div id="second-paragraph">
+                        <p class="section-paragraph"><br>If you had to place a bet, what team scored the most goals per season and how much goals in last 12 seasons? I was asking myself this exact question, so I decided to try to figure out what the answer was. If scoring is completely
+                            random we would expect the distribution of the count of goals scored to be roughly even across every minute of the game. Of course, it is not going to be perfectly distributed because of random errors, but every minute should
+                            have roughly the same number of goals, assuming the sample is large enough.The answer is Chelsea with 104 goals in season 2009-2010. They won the title that season.<br><b>CREDIT:<i> Wikipedia(2019)</i></b>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -99,7 +112,7 @@
         <section class="section">
             <div class="container">
                 <div class="row">
-                    <div class="col-xs-12 col-lg-4 col-md-4 col-sm-12 text-center">
+                    <div class="col-xs-12 col-lg-4 col-md-6 col-sm-12 text-center">
                         <h3>Total Spend On Salary</h3>
                         <div id="on-salary-spend-chart"></div>
                     </div>
@@ -113,6 +126,14 @@
                         <h3>Total Earnings On Transfers</h3>
                         <div id="on-transfer-earnings-chart"></div>
                     </div>
+
+                    <div id="second-paragraph">
+                        <p class="section-paragraph"><br>The Premier League has the highest revenue of any football league in the world, with total club revenues of €2.48 billion in 2009–10. In 2013–14, due to improved television revenues and cost controls, the Premier League had
+                            net profits in excess of £78 million, exceeding all other football leagues. In 2010 the Premier League was awarded the Queen's Award for Enterprise in the International Trade category for its outstanding contribution to international
+                            trade and the value it brings to English football and the United Kingdom's broadcasting industry.<br><b>CREDIT:<i>Footballhistory(2019)</i></b>
+                        </p>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -129,9 +150,9 @@
                             <th>Wins</th>
                             <th>Losses</th>
                             <th>Goals</th>
-                            <th>Salarys</th>
-                            <th>Transfers in</th>
-                            <th>Transfers out</th>
+                            <th>Salarys(m)</th>
+                            <th>Transfers in (m)</th>
+                            <th>Transfers out (m)</th>
                             <th>Clean Sheet</th>
                         </tr>
                     </table>

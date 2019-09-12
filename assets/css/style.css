@@ -40,10 +40,10 @@ body {
 
 .text-wraper h1 {
     text-align: center;
-    color: #add8e6;
-    font-size: 5vw;
-    font-family: "roboto", cursive;
-
+    color: #23384d;
+    font-size: 4vw;
+    font-family: "modak", cursive;
+    background-color: #00ffff;
 }
 
 /*------------------------------------Sections/Header/Footer info*/
@@ -53,6 +53,11 @@ body {
     padding: 20px 0;
     margin-left: 4px;
     margin-right: 4px;
+}
+
+.section-paragraph {
+    line-height: 2.0;
+
 }
 
 .footer {

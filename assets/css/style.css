@@ -6,7 +6,8 @@
     font-size: 16px;
 }
 
-body {
+body,
+html {
     width: 100%;
     height: auto;
 }
@@ -74,14 +75,6 @@ body {
     color: #00ffff;
 }
 
-.footer-section-paragraph {
-    color: #00ffff;
-    float: right;
-    font-weight: bolder;
-    margin-top: 20px;
-    font-size: larger;
-}
-
 .navbar-section-paragraph {
     color: #00ffff;
     float: right;
@@ -92,6 +85,19 @@ body {
     */
 }
 
+.footer-section-paragraph {
+    color: #00ffff;
+    float: right;
+    font-weight: bolder;
+    margin-top: 20px;
+    font-size: larger;
+}
+
+
+#goals_per_season {
+    height: 100%;
+    width: 100%
+}
 
 th {
     background: lightblue;

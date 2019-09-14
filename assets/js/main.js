@@ -127,7 +127,7 @@ function makeGraphs(error, pl_statsData) {
         .dimension(team_dim)
         .group(total_earnings_on_transfers);
 
-
+    // Table data
     queue()
         .defer(d3.json, "data/pl_stats.json")
         .await(someFunction);

@@ -1,23 +1,23 @@
 # Premier League Stats Milestone 2
 ## Top 4 Premier League Clubs comparison
 
-This project is made for all the football fans from football fanatic. I wanted to help fans to compare last 12 seasons of big 4 premier league clubs.
+This project is made for all the football fans from one football fanatic. I wanted to help fans to compare last 12 seasons of 4 major premier league clubs.
 
-The users of this page will be able to inspect how was they club did in wins, losses, goals and some finances.
+The users of this page will be able to inspect how did they club do in wins, losses, goals and some finances.
 
 To see my webpage click [here](https://matijabas.github.io/Premier_league_stats/)
 
 ## UX
 The website is for individuals interested in football,with focus on Premier league, to be precise, on "grande four" teams of English football.
-This project can help all the football fans to compare for example Liverpool vs Man Utd. or Chelsea with Arsenal during last 12 seasons.
-It's posible to compare teams trough the few categories.
+This project can help all the football fans to compare for example Liverpool vs Man Utd. or Chelsea vs Arsenal during last 12 seasons.
+It's posible to compare teams trough couple of categories.
 
 - As a user(read Liverpool suporter), I can compare my team with Chelsea team and see who scored more goals in 2009/2010 season.
 
 ### Mockup
 - Please find paper and pen mockup for the first design [Here](Mockups/mockup.png)
 
-**Note that the final design has changed from the original design in the mock-ups. I changed it because, was trying different layouts while I was 
+**Note that the final design has changed from the original design in the mock-ups. I changed it because I was trying different layouts while
 experimenting and learning the code and sometimes the new designs looked better than the original ones or was just more responsive. *
 
 ## Features
@@ -46,7 +46,7 @@ The footer has a back to top and refresh charts button.
 
 ### Features Left to Implement
 #### More Teams
-It would be nice to make bigger data that include more teams.
+It would be nice to add more data that would include more teams.
 
 ## Technologies Used
 
@@ -84,11 +84,11 @@ It would be nice to make bigger data that include more teams.
 Used development tools in Google Chrome to check how the website would look in different devices. Also used it to try different style and ideas.  
 
 ### Problems and bugs:
-- I have problem with table that contains all data, I try to make table with 7 rows and columns and add a previous and next button.
-I am unhappy because didn't made it how I originaly tought but the table that I make at the end is good aswell.
+- I have problem with table that contains all data, I tried to make table with 7 rows and columns and add a previous and next button.
+I am unhappy because didn't made it how I originaly tought but the table that I made at the end is good aswell.
 - There is still few problems with responsiveness because composite Chart is not responsive.
 - Had a problem with data format, because it was season not one year.Fix it at the end.
-- My mentor pointed out that the some part of code was not formatted correctly with the Bootstrap divs and rows
+- My mentor pointed out that some part of code was not formatted correctly with the Bootstrap divs and rows
     - To fix this I re watched some videos and took in what my mentor said to make my code clean and work more effectively
 
 ## Deployment
@@ -103,13 +103,13 @@ Once in a GITHUB repositories it was made live using GITHUB Pages. The website c
 Data for this project was used from:  https://www.kaggle.com/datasets?search=football
 
 ### Photo-Logo
-Picture for logo was from worldsoccertalk.com, but edited by myself.
+Picture for logo was from worldsoccertalk.com, edited by myself.
 
 ### Article
 It was very hard to find text so I made it myself and find on en.wikibooks.org.
 
 ### Work based on other code
-Code from all the frameworks that i have used, And the code from the dashboard project from the code institute and https://github.com/Code-Institute-Submissions.
+Code from all the frameworks that i have used, and code from the dashboard project from the code institute and https://github.com/Code-Institute-Submissions.
 
 ### Acknowledgements
 - To build this webpage I received inspiration from watching football every weekend with my friends and discussing football facts.

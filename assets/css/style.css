@@ -27,7 +27,7 @@ html {
     color: #00ffff;
 }
 
-/*------------------------------------Image*/
+/*------------------------------------Image-----------------*/
 
 .bg-clubs-logo {
     width: 80%;
@@ -49,9 +49,11 @@ html {
     color: #23384d;
     font-size: 4vw;
     font-family: "modak", cursive;
+    /*background-color: #c0c0c0;
+    */
 }
 
-/*------------------------------------Sections/Header/Footer info*/
+/*-------------------------------Sections/Header/Footer info----------------*/
 
 .section {
     padding: 20px 0;
@@ -106,7 +108,7 @@ th {
     text-align: center;
 }
 
-/*------------------------------------Refresh Buttons*/
+/*------------------------------------Refresh Buttons-----------*/
 
 #refresh-button {
     display: inline;
@@ -116,12 +118,6 @@ th {
 #footer-refresh-button {
     display: inline-block;
     margin: 5px 0px 5px 5px;
-}
-
-#central-refresh-button {
-    text-align: center;
-    display: block;
-    width: 100%;
 }
 
 /*------------------------------Charts--------------------*/

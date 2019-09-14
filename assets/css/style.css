@@ -50,7 +50,6 @@ html {
 /*------------------------------------Sections/Header/Footer info*/
 
 .section {
-    border-bottom: 1px solid #ffff00;
     padding: 20px 0;
     margin-left: 4px;
     margin-right: 4px;
@@ -89,7 +88,6 @@ html {
     color: #00ffff;
     float: right;
     font-weight: bolder;
-    margin-top: 20px;
     font-size: larger;
 }
 
@@ -107,10 +105,8 @@ th {
 /*------------------------------------Refresh Buttons*/
 
 #refresh-button {
-    float: inherit;
-    margin-top: 7px;
-    margin-left: 15px;
-
+    display: inline;
+    margin: 0;
 }
 
 #footer-refresh-button {

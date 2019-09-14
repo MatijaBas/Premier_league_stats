@@ -123,3 +123,15 @@ th {
     display: block;
     width: 100%;
 }
+
+/*------------------------------Charts--------------------*/
+
+#goals_per_season {
+    height: 100%;
+    width: 100%
+}
+
+#bar-charts {
+    height: 100%;
+    width: 100%
+}
